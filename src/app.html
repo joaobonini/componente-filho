@@ -1,0 +1,18 @@
+<template>
+	<lightning-card>
+		<div class="slds-m-around_medium">
+			<h1 class="slds-text-heading_large">
+				Componentes Filhos
+			</h1>
+			<c-empresa nome="Se filma e fala ?" cnpj="41234234213" city="Madagascar" ceo="KingMalbor" fund="2003">
+			</c-empresa>
+
+			<!-- <c-produto nome="Drugs" prod="Loló" preco="R$ 15,50" desc="Tu é doido o cara fica lombrado, falta de consideração"
+				estoq="Sim"></c-produto> -->
+			<template for:each={data} for:item="produto">
+				<c-produto key={produto.cod} prod={produto.prod} preco={produto.preco} estoq={produto.estoq}
+					desc={produto.desc}></c-produto>
+			</template>
+		</div>
+	</lightning-card>
+</template>
